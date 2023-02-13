@@ -6,7 +6,7 @@ export const Container = ({children}) => {
             display="flex"
             flexDirection="column"
             margin=" 0 auto"
-            maxW="container.lg"
+            maxW="1440px"
             minH="100vh"
             padding="0"
             bgGradient='linear(to-r, #fff8e1, #ffecb3)'

@@ -17,7 +17,11 @@ export const MobileMenu = ({isOpen, onClose, placement = 'right'}) => {
             <DrawerContent>
                 <DrawerCloseButton/>
                 <DrawerHeader borderBottomWidth='1px'>Menu</DrawerHeader>
-                <DrawerBody display="flex" flexDirection="column">
+                <DrawerBody
+                    display="flex"
+                    flexDirection="column"
+                    gap="0.5rem"
+                >
                     {linksOptions.length
                         ? linksOptions.map(({id, label, path}) => (
                             <NavLink style={({isActive}) => activeClasses(isActive)} key={id} to={path} onClick={onClose}>{label}</NavLink>

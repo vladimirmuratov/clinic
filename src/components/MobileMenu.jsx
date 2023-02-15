@@ -1,11 +1,17 @@
-import {Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay} from "@chakra-ui/react";
-import {NavLink} from "react-router-dom";
+import {
+    Divider,
+    Drawer,
+    DrawerBody,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerHeader,
+    DrawerOverlay
+} from "@chakra-ui/react";
 import {linksOptions} from "../linksOptions.js";
+import cardsOptions from "../cardsOptions.js";
+import {BaseNavLink} from "./base/BaseNavLink.jsx";
 
 export const MobileMenu = ({isOpen, onClose, placement = 'right'}) => {
-    const activeClasses = (isActive) => {
-        return isActive ? {textDecoration: 'underline'} : null
-    }
 
     return (
         <Drawer
@@ -22,12 +28,9 @@ export const MobileMenu = ({isOpen, onClose, placement = 'right'}) => {
                     flexDirection="column"
                     gap="0.5rem"
                 >
-                    {linksOptions.length
-                        ? linksOptions.map(({id, label, path}) => (
-                            <NavLink style={({isActive}) => activeClasses(isActive)} key={id} to={path} onClick={onClose}>{label}</NavLink>
-                        ))
-                        : null
-                    }
+                    <BaseNavLink linksOptions={linksOptions} onClose={onClose}/>
+                    <Divider/>
+                    <BaseNavLink linksOptions={cardsOptions} onClose={onClose}/>
                 </DrawerBody>
             </DrawerContent>
         </Drawer>

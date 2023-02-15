@@ -1,8 +1,11 @@
 import {Box, Grid, GridItem} from "@chakra-ui/react";
-import cardInfo from "../card-info.js";
-import {CardInfo} from "../components/CardInfo.jsx";
+import {useNavigate} from "react-router-dom";
+import cardInfo from "../cardsOptions.js";
+import {BaseCard} from "../components/base/BaseCard.jsx";
 
 export const MainPage = () => {
+    const navigate = useNavigate()
+
     return (
         <Box py="5px">
             <Grid
@@ -16,7 +19,7 @@ export const MainPage = () => {
                 {cardInfo.length
                     ? cardInfo.map((item) => (
                         <GridItem key={item.id}>
-                            <CardInfo {...item}/>
+                            <BaseCard navigate={navigate} {...item}/>
                         </GridItem>
                     ))
                     : null

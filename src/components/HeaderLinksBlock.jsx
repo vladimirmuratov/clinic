@@ -1,13 +1,11 @@
 import {Box} from "@chakra-ui/react";
-import {NavLink} from "react-router-dom";
+import {BaseNavLink} from "./base/BaseNavLink";
 
 export const HeaderLinksBlock = ({links}) => {
     const activeStyles = {
         color: "#bdbdbd",
         textDecoration: "underline"
     }
-
-    const getActiveClasses = (isActive) => isActive ? activeStyles : undefined
 
     return (
         <Box
@@ -17,13 +15,7 @@ export const HeaderLinksBlock = ({links}) => {
             fontWeight="semibold"
             letterSpacing={1.2}
         >
-            {links.length
-                ? links.map(({id, label, path}) => (
-                    <NavLink key={id} to={path}
-                             style={({isActive}) => getActiveClasses(isActive)}>{label}</NavLink>
-                ))
-                : null
-            }
+            <BaseNavLink linksOptions={links} activeStyles={activeStyles}/>
         </Box>
     )
 }

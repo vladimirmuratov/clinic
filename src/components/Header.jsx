@@ -18,7 +18,7 @@ export const Header = ({onOpen}) => {
             color='white'
         >
             <Box display="flex" alignItems="center" justifyContent="space-between">
-                <Link to="/" style={{fontSize: "1.5rem", fontWeight: "bold"}}>Logo</Link>
+                <Link to="/" style={{fontSize: "1.5rem", fontWeight: "bold"}}>МСК</Link>
                <HeaderLinksBlock links={linksOptions}/>
                 <IconButton
                     onClick={onOpen}

@@ -9,12 +9,16 @@ import {ThreeBlockPage} from "./pages/blocks-pages/ThreeBlockPage.jsx";
 import {FourBlockPage} from "./pages/blocks-pages/FourBlockPage.jsx";
 import {FiveBlockPage} from "./pages/blocks-pages/FiveBlockPage.jsx";
 import {SixBlockPage} from "./pages/blocks-pages/SixBlockPage.jsx";
+import {AmbulancePage} from "./pages/AmbulancePage.jsx";
+import {HospitalizationPage} from "./pages/HospitalizationPage.jsx";
 
 export default [
     {path: "/", Component: MainPage},
     {path: "/about", Component: AboutPage},
     {path: "/specialists", Component: SpecialistsPage},
     {path: "/contacts", Component: ContactsPage},
+    {path: "/ambulance", Component: AmbulancePage},
+    {path: "/hospitalization", Component: HospitalizationPage},
     {path: "/one-block", Component: OneBlockPage},
     {path: "/two-block", Component: TwoBlockPage},
     {path: "/three-block", Component: ThreeBlockPage},

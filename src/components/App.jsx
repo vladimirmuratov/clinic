@@ -7,7 +7,7 @@ function App() {
     return (
         <Layout>
             <Routes>
-                {routes.map(({path, Component}) => <Route key={path} exact path={path} element={<Component/>}/>)}
+                {routes.map(({path, Component}) => <Route exact key={path} path={path} element={<Component/>}/>)}
             </Routes>
         </Layout>
     )

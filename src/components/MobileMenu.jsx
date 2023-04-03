@@ -7,8 +7,8 @@ import {
     DrawerHeader,
     DrawerOverlay
 } from "@chakra-ui/react";
-import {linksOptions} from "../linksOptions.js";
-import cardsOptions from "../cardsOptions.js";
+import {linksOptions} from "../config/linksOptions.js";
+import cardsOptions from "../config/cardsOptions.js";
 import {BaseNavLink} from "./base/BaseNavLink.jsx";
 
 export const MobileMenu = ({isOpen, onClose, placement = 'right'}) => {

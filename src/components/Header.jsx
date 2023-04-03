@@ -1,7 +1,7 @@
 import {Box, IconButton} from "@chakra-ui/react";
 import {Link} from "react-router-dom";
 import {HamburgerIcon} from "@chakra-ui/icons";
-import {linksOptions} from "../linksOptions.js";
+import {linksOptions} from "../config/linksOptions.js";
 import {HeaderLinksBlock} from "./HeaderLinksBlock.jsx";
 
 export const Header = ({onOpen}) => {

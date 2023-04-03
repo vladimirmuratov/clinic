@@ -1,6 +1,6 @@
 import {Box, Grid, GridItem} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
-import cardInfo from "../cardsOptions.js";
+import cardInfo from "../config/cardsOptions.js";
 import {BaseCard} from "../components/base/BaseCard.jsx";
 
 export const MainPage = () => {
